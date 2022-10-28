@@ -1,0 +1,90 @@
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Product Details</title>
+</head>
+<body>
+    <form action="index.php" method="POST">
+        <label for="pid">Product ID</label>
+        <input type="text" name="pid" id="pid" required>
+        <br>
+        <label for="pname">Product Name</label>
+        <input type="text" name="pname" id="pname" required>
+        <br>
+        <label for="pcat">Product Category</label>
+        <input type="text" name="pcat" id="pcat" required>
+        <br>
+        <label for="pdesc">Product Description</label>
+        <input type="text" name="pdesc" id="pdesc" required>
+        <br>
+        <label for="pimp">Imported</label>
+        <input type="radio" name="pimp" id="pimp" value="yes" required>Yes
+        <input type="radio" name="pimp" id="pimp" value="no" required>No
+        <br>
+        <label for="pprice">Price</label>
+        <input type="text" name="pprice" id="pprice" required>
+        <br>
+        <label for="poc">Origin Country</label>
+        <input type="text" name="poc" id="poc" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+*/
+
+/* styling fo abaove code */
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 10pt;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+form input[type="radio"] {
+    margin: 0 -220px;
+}

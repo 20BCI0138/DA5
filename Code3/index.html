@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Product Details</title>
+</head>
+<body>
+    <form action="file.php" method="POST">
+        <label for="pid">Product ID</label>
+        <input type="text" name="pid" id="pid" required>
+        <br>
+        <label for="pname">Product Name</label>
+        <input type="text" name="pname" id="pname" required>
+        <br>
+        <label for="pcat">Product Category</label>
+        <input type="text" name="pcat" id="pcat" required>
+        <br>
+        <label for="pdesc">Product Description</label>
+        <input type="text" name="pdesc" id="pdesc" required>
+        <br>
+        <label for="pimp">Imported</label>
+        Yes <input type="radio" name="pimp" id="pimp" value="yes" required>
+        No <input type="radio" name="pimp" id="pimp" value="no" required>
+        <br>
+        <label for="pprice">Price</label>
+        <input type="text" name="pprice" id="pprice" required>
+        <br>
+        <label for="poc">Origin Country</label>
+        <input type="text" name="poc" id="poc" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

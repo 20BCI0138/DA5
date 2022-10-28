@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Poem</title>
+</head>
+<body>
+    <h1 id="title">The Road Not Taken</h1>
+    <p id="para1">Two roads diverged in a yellow wood,<br>
+    And sorry I could not travel both<br>
+    And be one traveler, long I stood<br>
+    And looked down one as far as I could<br>
+    To where it bent in the undergrowth;<br></p>
+    <p id="para2" style="display:none;">Then took the other, as just as fair,<br>
+    And having perhaps the better claim,<br>
+    Because it was grassy and wanted wear;<br>
+    Though as for that the passing there<br>
+    Had worn them really about the same,<br></p>
+    <p id="para3" style="display:none;">And both that morning equally lay<br>
+    In leaves no step had trodden black.<br>
+    Oh, I kept the first for another day!<br>
+    Yet knowing how way leads on to way,<br>
+    I doubted if I should ever come back.<br></p>
+    <p id="para4" style="display:none;">I shall be telling this with a sigh<br>
+    Somewhere ages and ages hence:<br>
+    Two roads diverged in a wood, and I—<br>
+    I took the one less traveled by,<br>
+    And that has made all the difference.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" style="display: none;" id="author">
+                <button type="button" class="btn btn-secondary">Author</button>
+            </div>
+            <div class="col-sm-6" id="showpara">
+                <button type="button" class="btn btn-secondary">Show Para</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 id="name" style="display: none;">Robert Frost</h2>
+        <p id="bio" style="display: none;">Robert Lee Frost was an American poet. He is highly regarded for his realistic depictions of rural life and his command of American colloquial speech. His work frequently employed settings from rural life in New England in the early twentieth century, using them to examine complex social and philosophical themes. Frost was honored frequently during his lifetime, receiving four Pulitzer Prizes for Poetry. He was also awarded the Congressional Gold Medal in 1961 and the Presidential Medal of Freedom in 1969. He published more than 40 collections of poetry, and more than 160 individual poems.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Robert_Frost_NYWTS.jpg" alt="Robert Frost" id="pic" style="display: none;">
+        <p style="display: none;" id="description">The Road Not Taken is a poem by American poet Robert Frost. It was published in 1916 as the first poem in the collection Mountain Interval. The poem presents a choice between two paths, both of which lead to the same destination. The speaker chooses the less-traveled path, and reflects on the decision. The poem is often anthologized and is widely known and quoted.</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#title").click(function(){
+                if (!$("#para2").is(":visible")){
+                    $("#para2").show();
+                    $("#para3").show();
+                    $("#para4").show();
+                    $("#author").show();
+                } else {
+                    $("#para2").hide();
+                    $("#para3").hide();
+                    $("#para4").hide();
+                    $("#author").hide();
+                    $("#name").hide();
+                    $("#bio").hide();
+                    $("#pic").hide();
+                    $("#description").hide();
+                }
+            });
+            $("#author").click(function(){
+                $("#name").toggle();
+                $("#bio").toggle();
+                $("#pic").toggle();
+                $("#description").toggle();
+            });
+            $("#showpara").click(function(){
+                if ($("#para1").is(":visible") && !$("#para2").is(":visible") && !$("#para3").is(":visible") && !$("#para4").is(":visible")) {
+                    $("#para2").show();
+                } else if ($("#para2").is(":visible") && !$("#para3").is(":visible") && !$("#para4").is(":visible")) {
+                    $("#para3").show();
+                } else if ($("#para3").is(":visible") && !$("#para4").is(":visible")) {
+                    $("#para4").show();
+                    $("#author").show();
+                } else if ($("#para4").is(":visible")) {
+                    $("#author").hide();
+                    $("#para2").hide();
+                    $("#para3").hide();
+                    $("#para4").hide();
+                    $("#name").hide();
+                    $("#bio").hide();
+                    $("#pic").hide();
+                    $("#description").hide();
+                }
+            });
+            $("#para1").click(function(){
+                if ($("#para1").css("background-color") == "rgb(255, 255, 0)"){
+                    $("#para1").css("background-color", "white");
+                }
+                else{
+                    $("#para1").css("background-color", "yellow");
+                }
+            });
+            $("#para2").click(function(){
+                if ($("#para2").css("background-color") == "rgb(255, 255, 0)"){
+                    $("#para2").css("background-color", "white");
+                }
+                else{
+                    $("#para2").css("background-color", "yellow");
+                }
+            });
+            $("#para3").click(function(){
+                if ($("#para3").css("background-color") == "rgb(255, 255, 0)"){
+                    $("#para3").css("background-color", "white");
+                }
+                else{
+                    $("#para3").css("background-color", "yellow");
+                }
+            });
+            $("#para4").click(function(){
+                if ($("#para4").css("background-color") == "rgb(255, 255, 0)"){
+                    $("#para4").css("background-color", "white");
+                }
+                else{
+                    $("#para4").css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

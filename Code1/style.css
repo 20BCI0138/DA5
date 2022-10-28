@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+#para1, #para2, #para3, #para4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+    border-radius: 10%;
+    margin: 1rem;
+    display: block;
+    margin:auto;
+}
+
+#name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+#bio {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+#pic {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+#description {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem;
+}
