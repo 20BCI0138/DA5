@@ -1,10 +1,3 @@
-<!-- Consider an existing file that has some data. Write down the code to validate the data on the server side.
-• Read the file. If the file text contains the word "VIT" in any case, then the entire data should be encrypted using a substitution cipher.
-• In a substitution cipher, every letter is substituted by the alphabet.
-• Every alphabet is substituted by 10 characters forward, so the alphabet A is substituted with K, the alphabet B is substituted with L, and so on. When the end is reached, it is circled back to the starting point, R is substituted by A, and so on.
-• Write the encoded text to a different file and use the current date and time as part of the file name.
-Display the encrypted data, file name and size to the user. -->
-
 <?php
     $filename = "data.txt";
     $file = fopen($filename, "r");
@@ -26,10 +19,10 @@ Display the encrypted data, file name and size to the user. -->
         $file = fopen($filename, "w");
         fwrite($file, $data);
         fclose($file);
-        echo "Encrypted data: $data";
-        echo "<br>File name: $filename";
-        echo "<br>File size: ".filesize($filename);
+        echo "<h1>Encrypted data: <h2>$data";
+        echo "<br><h1>File name: <h2>$filename";
+        echo "<br><h2>File size: " . filesize($filename);
     } else {
-        echo "No data to encrypt";
+        echo "<h1>No data to encrypt";
     }
 ?>
